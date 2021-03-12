@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ApiApp:war">
+    <output-path>$PROJECT_DIR$/ApiApp/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ApiApp</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ApiApp-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ApiApp:war exploded" />
+    </root>
+  </artifact>
+</component>
