@@ -24,7 +24,7 @@ public class topicController {
         return topicService.getAllTopics();
     }
 
-    @RequestMapping("/topic/{id}")
+    @RequestMapping("/topics/{id}")
     public Topics getTopic(@PathVariable String id)
     {
         return topicService.getTopic(id);
@@ -36,6 +36,16 @@ public class topicController {
     {
         topicService.addTopic(topic);
     }
-
+    // explicit mention for post request
+    @RequestMapping(method = RequestMethod.PUT,value ="/topics/{id}")
+    public void updateTopic(@RequestBody Topics topic,@PathVariable String id )
+    {
+        topicService.updateTopic(topic,id);
+    }
+    @RequestMapping(method = RequestMethod.DELETE,value ="/topics/{id}")
+    public void deleteTopic(@RequestBody Topics topic,@PathVariable String id )
+    {
+        topicService.deleteTopic(topic,id);
+    }
 
 }
