@@ -31,7 +31,7 @@ public class topicController {
         return topicService.getTopic(id);
     }
 
-    //insert Operation
+    //Insert Operation
     @RequestMapping(method = RequestMethod.POST,value ="/topics")
     public void addTopic(@RequestBody Topics topic)
     {

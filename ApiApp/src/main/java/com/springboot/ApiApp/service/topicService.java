@@ -32,6 +32,7 @@ public class topicService
     {
         for(int i=0;i<topics.size();i++)
         {
+            //comparison
             if(topics.get(i).getId() == id )
             {
                 topics.set(i,topic);
