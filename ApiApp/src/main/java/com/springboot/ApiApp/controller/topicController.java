@@ -17,31 +17,33 @@ public class topicController {
         this.topicService = topicService;
     }
 
-    //by default get request is called
+    //Display all the values
     @RequestMapping("/topics")
     public List<Topics> getAllTopics()
     {
         return topicService.getAllTopics();
     }
 
+    //Display a single entity
     @RequestMapping("/topics/{id}")
     public Topics getTopic(@PathVariable String id)
     {
         return topicService.getTopic(id);
     }
 
-    // explicit mention for post request
+    //insert Operation
     @RequestMapping(method = RequestMethod.POST,value ="/topics")
     public void addTopic(@RequestBody Topics topic)
     {
         topicService.addTopic(topic);
     }
-    // explicit mention for post request
+    //update operation
     @RequestMapping(method = RequestMethod.PUT,value ="/topics/{id}")
     public void updateTopic(@RequestBody Topics topic,@PathVariable String id )
     {
         topicService.updateTopic(topic,id);
     }
+    //delete operation
     @RequestMapping(method = RequestMethod.DELETE,value ="/topics/{id}")
     public void deleteTopic(@RequestBody Topics topic,@PathVariable String id )
     {
