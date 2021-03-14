@@ -12,21 +12,25 @@ public class topicService
 {
     //defining the list of Topics to perform add, delete and update operations
     private List<Topics> topics = new ArrayList<>();
+
     //function to get all the topics displayed
     public List<Topics> getAllTopics()
     {
         return topics;
     }
+
     //function to get a single topic through id
     public Topics getTopic(String topicId)
     {
         return topics.stream().filter(t -> t.getId().equals(topicId)).findFirst().get();
     }
+
     //function to add a topic of Topic type to the list
     public void addTopic(Topics topic)
     {
         topics.add(topic);
     }
+
     //function to update a particular topic using id
     public void updateTopic(Topics topic, String id)
     {
@@ -40,6 +44,7 @@ public class topicService
             }
         }
     }
+
     //function to delete a particular topic using id
     public void deleteTopic(Topics topic, String id)
     {
